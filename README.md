@@ -24,7 +24,7 @@ ln -s ./llama.cpp/main .
 
 ```
 
-# Download gguf models.  For exmaple 
+# Download LLM models. 
 ```
 cd models
 
