@@ -12,7 +12,7 @@ based on your setup.
 #Install:
 
 
-git checkout https://github.com/ggerganov/llama.cpp
+git clone https://github.com/ggerganov/llama.cpp
 
 cd llama.cpp
 
