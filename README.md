@@ -9,7 +9,7 @@ Download any llama.cpp model that is safe or not safe depending on your taste.
 The program with 4000 context size was run on an M1 macbook with 16gb of ram.  You may have to adjust things up or down
 based on your setup.
 
-#Install:
+# Install:
 
 ```
 git clone https://github.com/ggerganov/llama.cpp
@@ -24,7 +24,7 @@ ln -s ./llama.cpp/main .
 
 ```
 
-#Download gguf models.  For exmaple 
+# Download gguf models.  For exmaple 
 ```
 cd models
 
@@ -37,7 +37,7 @@ You might have to use a smaller model than 13b if you are on a machine with less
 
 # Examples 
 
-##As Joe, have the llm ask you deep questions about yourself.
+## As Joe, have the llm ask you deep questions about yourself.
 
 ./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/chat/deep-questions.txt --chat
 
@@ -63,7 +63,7 @@ Your input (leave blank to exit):
 
 ```
 
-##Figure out why joe isn't a billionaire yet
+## Figure out why joe isn't a billionaire yet
 
 ./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/billionaire.txt
 
