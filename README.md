@@ -11,7 +11,7 @@ based on your setup.
 
 #Install:
 
-
+```
 git clone https://github.com/ggerganov/llama.cpp
 
 cd llama.cpp
@@ -22,23 +22,26 @@ cd ..
 
 ln -s ./llama.cpp/main .
 
-#Download gguf models.  For exmaple 
+```
 
+#Download gguf models.  For exmaple 
+```
 cd models
 
 wget https://huggingface.co/TheBloke/Utopia-13B-GGUF/resolve/main/utopia-13b.Q4_K_S.gguf
 
 cd ..
+```
 
 You might have to use a smaller model than 13b if you are on a machine with less than 16gb.
 
 # Examples 
 
-As Joe, have the llm ask you deep questions about yourself.
+##As Joe, have the llm ask you deep questions about yourself.
 
 ./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/chat/deep-questions.txt --chat
 
-\```
+```
 Summary: Morning Routine: The diarist woke up hungover from a night of drinking with co-workers, which may have led to oversharing. They plan to address this issue in the future.
 
 Work: At a meeting, the individual felt frustrated as their ideas were not heard due to an obnoxious co-worker, Bob, who frequently interrupts them.
@@ -58,13 +61,13 @@ LLaMA Output: Insights:
 Deep Question: What specific steps can the diarist take to balance their social life, professional growth, and personal interests while addressing their struggles with alcohol consumption and improving communication in the workplace?
 Your input (leave blank to exit): 
 
-\```
+```
 
-Figure out why joe isn't a billionaire yet
+##Figure out why joe isn't a billionaire yet
 
 ./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/billionaire.txt
 
-\```
+```
 Joe's diary entry reveals several reasons why he is not currently on the path to becoming a billionaire. Firstly, his focus is scattered across various interests and projects, which prevents him from dedicating sufficient time and resources to any single venture that could potentially generate substantial wealth. Secondly, Joe tends to prioritize personal satisfaction and learning over monetary gains, as evidenced by his decision to work on a non-profit organization instead of focusing on high-reward, high-income opportunities.
 
 Moreover, Joe's lack of a clear financial goal or plan hinders his progress towards billionaire status. He doesn't have specific targets for income growth or investment returns, which makes it difficult for him to measure his success and adjust his strategies accordingly. Lastly, Joe's reluctance to network with wealthy individuals and learn from their experiences may limit his exposure to valuable insights, opportunities, and potential partnerships that could accelerate his journey to becoming a billionaire.
