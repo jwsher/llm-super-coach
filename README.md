@@ -1,11 +1,18 @@
 
 
 The LLM super coach allows you to put diary entries into llama and have it act as a coach to analyze you.  
+
 Download any llama.cpp model that is safe or not safe depending on your taste.  
 
-*Learn why you're not a billionaire. 
-*Have the model ask you deep probing questions interactively.
-
+* Learn why you're not a billionaire.  (examples/prompts/billionaire.txt)
+* Have the model ask you deep probing questions interactively. (examples/prompts/chat/deep-questions.txt)
+* Learn how to improve relationships (examples/prompts/build-relationships.txt)
+* Learn how to break bad habits. (examples/prompts/changing-habits.txt)
+* Learn uncomfortable truths about yourself. (examples/prompts/uncomfrotable-truths.txt)
+* Have a great productive day. (examples/prompts/great-productive-day.txt)
+* Get suggestions for developing skills. (examples/prompts/developing-skills.txt)
+* Find and fix limiting beliefs (examples/prompts/limiting-beliefs.txt)
+  
 The program with 4000 context size was run on an M1 macbook with 16gb of ram.  You may have to adjust things up or down
 based on your setup.
 
@@ -85,4 +92,4 @@ To change his trajectory and increase the likelihood of becoming a billionaire, 
 9. Maintain discipline and perseverance: Achieving billionaire status requires unwavering dedication, determination, and resilience in the face of setbacks and challenges. Joe must be prepared to make sacrifices and commit significant time and effort to his pursuit of wealth.
 10. Seek mentorship and guidance: Throughout his journey, Joe should actively seek out mentors who have achieved billionaire status or are experienced in the fields he is targeting. Their insights and advice can prove invaluable in helping him avoid common pitfalls and accelerate his progress towards becoming a billionaire.
 
-\```
+```
