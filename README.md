@@ -41,6 +41,11 @@ cd ..
 ```
 
 You might have to use a smaller model than 13b if you are on a machine with less than 16gb.
+# Usage
+```
+./src/process_sumary.py <text to analyze> <model to use> <prompt text file> [--chat]
+  --chat   Chat Interactively With Llama
+```
 
 # Examples 
 
