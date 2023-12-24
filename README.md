@@ -49,7 +49,32 @@ You might have to use a smaller model than 13b if you are on a machine with less
 
 # Examples 
 
-## As Joe, have the llm ask you deep questions about yourself.
+## Figure out why the diarist isn't a billionaire yet
+```
+./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/billionaire.txt
+```
+```
+Joe's diary entry reveals several reasons why he is not currently on the path to becoming a billionaire. Firstly, his focus is scattered across various interests and projects, which prevents him from dedicating sufficient time and resources to any single venture that could potentially generate substantial wealth. Secondly, Joe tends to prioritize personal satisfaction and learning over monetary gains, as evidenced by his decision to work on a non-profit organization instead of focusing on high-reward, high-income opportunities.
+
+Moreover, Joe's lack of a clear financial goal or plan hinders his progress towards billionaire status. He doesn't have specific targets for income growth or investment returns, which makes it difficult for him to measure his success and adjust his strategies accordingly. Lastly, Joe's reluctance to network with wealthy individuals and learn from their experiences may limit his exposure to valuable insights, opportunities, and potential partnerships that could accelerate his journey to becoming a billionaire.
+
+To change his trajectory and increase the likelihood of becoming a billionaire, Joe should:
+
+1. Identify a primary focus or niche: He needs to choose one area where he can excel and create substantial value, whether it's in entrepreneurship, investing, or another high-income field. This will allow him to concentrate his efforts and resources on achieving success in that domain.
+2. Prioritize wealth accumulation: Joe should reevaluate his priorities and focus more on generating substantial income and building wealth, while still maintaining a balance between personal satisfaction and financial goals. This may involve shifting his attention away from non-profit work and towards higher-paying opportunities or ventures with greater potential for growth.
+3. Set clear financial targets: He should establish specific, measurable financial goals, such as income milestones, investment returns, and net worth targets. This will enable him to track his progress and adjust his strategies as needed.
+4. Network with high-net-worth individuals: Joe should actively seek out networking opportunities with successful entrepreneurs, investors, and other high-achievers who can provide guidance, mentorship, and potentially lucrative partnerships or investment opportunities.
+5. Develop a comprehensive financial plan: He needs to create a detailed roadmap that includes short-term and long-term strategies for income growth, investing, risk management, and tax optimization. This will help him stay focused and make informed decisions throughout his journey to becoming a billionaire.
+6. Continuously learn and adapt: Joe should remain open to learning from his experiences and the successes of others, while also being willing to adjust his strategies and goals as needed based on new information or opportunities that arise.
+7. Focus on scalable business models: When pursuing entrepreneurial ventures, he should prioritize projects with high growth potential and scalable business models, which can generate substantial wealth more efficiently than traditional businesses.
+8. Diversify investments: In addition to focusing on his primary area of expertise, Joe should explore various investment opportunities, including real estate, stocks, bonds, and alternative assets, to build a diversified portfolio that can generate consistent income and capital appreciation.
+9. Maintain discipline and perseverance: Achieving billionaire status requires unwavering dedication, determination, and resilience in the face of setbacks and challenges. Joe must be prepared to make sacrifices and commit significant time and effort to his pursuit of wealth.
+10. Seek mentorship and guidance: Throughout his journey, Joe should actively seek out mentors who have achieved billionaire status or are experienced in the fields he is targeting. Their insights and advice can prove invaluable in helping him avoid common pitfalls and accelerate his progress towards becoming a billionaire.
+
+```
+
+
+## Have the llm ask you deep questions about yourself.
 ```
 ./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/chat/deep-questions.txt --chat
 ```
@@ -76,26 +101,3 @@ Your input (leave blank to exit):
 
 ```
 
-## Figure out why joe isn't a billionaire yet
-```
-./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/billionaire.txt
-```
-```
-Joe's diary entry reveals several reasons why he is not currently on the path to becoming a billionaire. Firstly, his focus is scattered across various interests and projects, which prevents him from dedicating sufficient time and resources to any single venture that could potentially generate substantial wealth. Secondly, Joe tends to prioritize personal satisfaction and learning over monetary gains, as evidenced by his decision to work on a non-profit organization instead of focusing on high-reward, high-income opportunities.
-
-Moreover, Joe's lack of a clear financial goal or plan hinders his progress towards billionaire status. He doesn't have specific targets for income growth or investment returns, which makes it difficult for him to measure his success and adjust his strategies accordingly. Lastly, Joe's reluctance to network with wealthy individuals and learn from their experiences may limit his exposure to valuable insights, opportunities, and potential partnerships that could accelerate his journey to becoming a billionaire.
-
-To change his trajectory and increase the likelihood of becoming a billionaire, Joe should:
-
-1. Identify a primary focus or niche: He needs to choose one area where he can excel and create substantial value, whether it's in entrepreneurship, investing, or another high-income field. This will allow him to concentrate his efforts and resources on achieving success in that domain.
-2. Prioritize wealth accumulation: Joe should reevaluate his priorities and focus more on generating substantial income and building wealth, while still maintaining a balance between personal satisfaction and financial goals. This may involve shifting his attention away from non-profit work and towards higher-paying opportunities or ventures with greater potential for growth.
-3. Set clear financial targets: He should establish specific, measurable financial goals, such as income milestones, investment returns, and net worth targets. This will enable him to track his progress and adjust his strategies as needed.
-4. Network with high-net-worth individuals: Joe should actively seek out networking opportunities with successful entrepreneurs, investors, and other high-achievers who can provide guidance, mentorship, and potentially lucrative partnerships or investment opportunities.
-5. Develop a comprehensive financial plan: He needs to create a detailed roadmap that includes short-term and long-term strategies for income growth, investing, risk management, and tax optimization. This will help him stay focused and make informed decisions throughout his journey to becoming a billionaire.
-6. Continuously learn and adapt: Joe should remain open to learning from his experiences and the successes of others, while also being willing to adjust his strategies and goals as needed based on new information or opportunities that arise.
-7. Focus on scalable business models: When pursuing entrepreneurial ventures, he should prioritize projects with high growth potential and scalable business models, which can generate substantial wealth more efficiently than traditional businesses.
-8. Diversify investments: In addition to focusing on his primary area of expertise, Joe should explore various investment opportunities, including real estate, stocks, bonds, and alternative assets, to build a diversified portfolio that can generate consistent income and capital appreciation.
-9. Maintain discipline and perseverance: Achieving billionaire status requires unwavering dedication, determination, and resilience in the face of setbacks and challenges. Joe must be prepared to make sacrifices and commit significant time and effort to his pursuit of wealth.
-10. Seek mentorship and guidance: Throughout his journey, Joe should actively seek out mentors who have achieved billionaire status or are experienced in the fields he is targeting. Their insights and advice can prove invaluable in helping him avoid common pitfalls and accelerate his progress towards becoming a billionaire.
-
-```
