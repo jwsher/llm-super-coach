@@ -40,7 +40,7 @@ wget https://huggingface.co/TheBloke/Utopia-13B-GGUF/resolve/main/utopia-13b.Q4_
 cd ..
 ```
 
-You might have to use a smaller model than 13b if you are on a machine with less than 16gb.
+You might have to use a smaller model than 13b if you are on a machine with less than 16gb of ram.
 # Usage
 ```
 ./src/process_sumary.py <text to analyze> <model to use> <prompt text file> [--chat]
