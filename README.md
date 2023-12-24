@@ -45,8 +45,9 @@ You might have to use a smaller model than 13b if you are on a machine with less
 # Examples 
 
 ## As Joe, have the llm ask you deep questions about yourself.
-
+```
 ./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/chat/deep-questions.txt --chat
+```
 
 ```
 Summary: Morning Routine: The diarist woke up hungover from a night of drinking with co-workers, which may have led to oversharing. They plan to address this issue in the future.
@@ -71,9 +72,9 @@ Your input (leave blank to exit):
 ```
 
 ## Figure out why joe isn't a billionaire yet
-
+```
 ./src/process_summary.py ./examples/joe-example-diary.org ./models/Utopia-13B.q4_k_s.gguf  ./examples/prompts/billionaire.txt
-
+```
 ```
 Joe's diary entry reveals several reasons why he is not currently on the path to becoming a billionaire. Firstly, his focus is scattered across various interests and projects, which prevents him from dedicating sufficient time and resources to any single venture that could potentially generate substantial wealth. Secondly, Joe tends to prioritize personal satisfaction and learning over monetary gains, as evidenced by his decision to work on a non-profit organization instead of focusing on high-reward, high-income opportunities.
 
