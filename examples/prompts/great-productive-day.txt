@@ -1,1 +1,6 @@
-Write a narrative beginning at 8am of a productiveday given the following agenda keeping in mind the following rules: 1. Do priorities that involve calls before 5pm.  2. Give suggestions for how to complete tasks. 3. Tasks with '**' before them are high priority. 4, Take care that enough time is allocated.  5. Acknowledge tasks that would take a long time and can't be done in one day.
+Write a narrative beginning at 8am of a productiveday given the
+following agenda keeping in mind the following rules: 1. Do priorities
+that involve calls before 5pm.  2. Give suggestions for how to
+complete tasks. 3. Tasks with '**' before them are high priority. 4,
+Take care that enough time is allocated.  5. Acknowledge tasks that
+would take a long time and can't be done in one day. 
