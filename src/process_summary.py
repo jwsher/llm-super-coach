@@ -85,7 +85,8 @@ def main(input_pattern, model_file, instruction_file, chat_mode):
                 chat_mode_process(chunk, model_file, instruction)
     else:
         for input_file in input_files:
-            print ("LLM Output:\n"+run_llama_on_chunk(input_file, model_file,  instruction))
+            for chunk in split_into_chunks(input_file):
+                print ("LLM Output:\n"+run_llama_on_chunk(chunk, model_file,  instruction))
 
 if __name__ == "__main__":
     if len(sys.argv) < 4:
