@@ -1,4 +1,4 @@
-#!python
+#!/usr/bin/python
 import subprocess
 import re
 import sys
@@ -57,7 +57,7 @@ def run_llama_on_chunk(chunk, model_file, instruction):
     with open('prompt.txt', 'w') as file:
         file.write(prompt_text)
     
-    command = f"./main -c {max_tokens} --temp 0.0 --top_p 0.0 --top_k 1.0 -n -1 -f prompt.txt -m {model_file}"
+    command = f"./main -c {max_tokens} --temp 0.0 --top_p 0.0 --top_k 1.0 -n {max_tokens} -f prompt.txt -m {model_file}"
 #    print(command)
     process = subprocess.run(command, shell=True, capture_output=True, text=True)
     
