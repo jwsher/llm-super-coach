@@ -7,7 +7,8 @@ import glob
 from datetime import datetime
 from transformers import GPT2Tokenizer
 
-max_tokens=4000
+max_tokens=3000
+prompt_text_size=500
 
 def count_tokens(text):
     # Initialize the GPT-2 tokenizer
@@ -18,13 +19,23 @@ def count_tokens(text):
     return len(tokens)
 
 
-
-def split_into_chunks(filename, chunk_size=2600):
+def split_into_chunks(filename, prompt_size, chunk_size=max_tokens):
     with open(filename, 'r') as file:
         text = file.read()
-        tokens = re.findall(r'\S+|\n', text)
-        for i in range(0, len(tokens), chunk_size):
-            yield ' '.join(tokens[i:i+chunk_size])
+        while(len(text)>0):
+            rest=""
+            tok_count=max_tokens+1
+            max_size = max_tokens-prompt_size-prompt_text_size
+            while (tok_count>max_size):
+                tok_count=count_tokens(text)
+                trim=((tok_count-max_size)*2)
+                if (trim>0):
+                    rest=text[-trim:]+rest
+                    text=text[:-trim]
+                tokens = re.findall(r'\S+|\n', text)
+            for i in range(0, len(tokens), chunk_size):
+                yield ' '.join(tokens[i:i+chunk_size])
+            text=rest
 
 def read_instruction(instruction_file):
     with open(instruction_file, 'r') as file:
@@ -42,11 +53,12 @@ def run_llama_on_chunk(chunk, model_file, instruction):
 
 ### Response:
 """
+
     with open('prompt.txt', 'w') as file:
         file.write(prompt_text)
     
     command = f"./main -c {max_tokens} --temp 0.0 --top_p 0.0 --top_k 1.0 -n -1 -f prompt.txt -m {model_file}"
-    print(command)
+#    print(command)
     process = subprocess.run(command, shell=True, capture_output=True, text=True)
     
     response_start = process.stdout.find("### Response:") + len("### Response:")
@@ -78,14 +90,14 @@ def main(input_pattern, model_file, instruction_file, chat_mode):
 
     instruction = read_instruction(instruction_file)
     input_files = sorted(glob.glob(input_pattern))
-
+    prompt_size = count_tokens(instruction)
     if chat_mode:
         for input_file in input_files:
-            for chunk in split_into_chunks(input_file):
+            for chunk in split_into_chunks(input_file,prompt_size):
                 chat_mode_process(chunk, model_file, instruction)
     else:
         for input_file in input_files:
-            for chunk in split_into_chunks(input_file):
+            for chunk in split_into_chunks(input_file,prompt_size):
                 print ("LLM Output:\n"+run_llama_on_chunk(chunk, model_file,  instruction))
 
 if __name__ == "__main__":
